@@ -1,553 +1,670 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Press+Start+2P&family=Pacifico&family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Intro: HTML & CSS – Girls'Day@DigitalService</title>
+    <style>
+      .intro-hero {
+        background: linear-gradient(
+          135deg,
+          #6894ec 0%,
+          #bc7afa 50%,
+          #eb95ec 100%
+        );
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Press+Start+2P&family=Pacifico&family=Archivo+Black&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Intro: HTML & CSS – Girls'Day@DigitalService</title>
-  <style>
-    .intro-hero {
-      background: linear-gradient(135deg, #6894ec 0%, #bc7afa 50%, #eb95ec 100%);
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
+      .intro-hero h1 {
+        font-size: 2.2rem;
+        margin: 0 0 0.5rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
 
-    .intro-hero h1 {
-      font-size: 2.2rem;
-      margin: 0 0 0.5rem;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    }
+      .intro-hero p {
+        font-size: 1.1rem;
+        margin: 0;
+        opacity: 0.95;
+      }
 
-    .intro-hero p {
-      font-size: 1.1rem;
-      margin: 0;
-      opacity: 0.95;
-    }
+      .intro-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
 
-    .intro-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #6894ec;
+      }
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      border-top: 4px solid #6894ec;
-    }
+      .card.pink-border {
+        border-top-color: #eb95ec;
+      }
 
-    .card.pink-border {
-      border-top-color: #eb95ec;
-    }
+      .card.purple-border {
+        border-top-color: #bc7afa;
+      }
 
-    .card.purple-border {
-      border-top-color: #bc7afa;
-    }
+      .card.orange-border {
+        border-top-color: #eca068;
+      }
 
-    .card.orange-border {
-      border-top-color: #eca068;
-    }
+      .card.green-border {
+        border-top-color: #8de38c;
+      }
 
-    .card.green-border {
-      border-top-color: #8de38c;
-    }
+      .card.dark-background {
+        color: white;
+        background-color: #222222;
+      }
 
-    .card.dark-background {
-      color: white;
-      background-color: #222222;
-    }
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
+      .card .label {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 2px 8px;
+        border-radius: 20px;
+        margin-bottom: 0.75rem;
+      }
 
-    .card .label {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 2px 8px;
-      border-radius: 20px;
-      margin-bottom: 0.75rem;
-    }
+      .label-html {
+        background: #dbeafe;
+        color: #1e40af;
+      }
 
-    .label-html {
-      background: #dbeafe;
-      color: #1e40af;
-    }
+      .label-css {
+        background: #ede9fe;
+        color: #6d28d9;
+      }
 
-    .label-css {
-      background: #ede9fe;
-      color: #6d28d9;
-    }
+      .label-tipp {
+        background: #fef3c7;
+        color: #92400e;
+      }
 
-    .label-tipp {
-      background: #fef3c7;
-      color: #92400e;
-    }
+      .label-try {
+        background: #d1fae5;
+        color: #065f46;
+      }
 
-    .label-try {
-      background: #d1fae5;
-      color: #065f46;
-    }
+      code {
+        font-family: "Space Mono", "Courier New", monospace;
+        font-size: 0.85em;
+      }
 
-    code {
-      font-family: 'Space Mono', 'Courier New', monospace;
-      font-size: 0.85em;
-    }
+      pre {
+        background: #f3f4f6;
+        border-radius: 8px;
+        padding: 1rem;
+        overflow-x: auto;
+        font-family: "Space Mono", "Courier New", monospace;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        margin: 0.75rem 0 0;
+      }
 
-    pre {
-      background: #f3f4f6;
-      border-radius: 8px;
-      padding: 1rem;
-      overflow-x: auto;
-      font-family: 'Space Mono', 'Courier New', monospace;
-      font-size: 0.82rem;
-      line-height: 1.6;
-      margin: 0.75rem 0 0;
-    }
+      .tag {
+        color: #1d4ed8;
+      }
 
-    .tag {
-      color: #1d4ed8;
-    }
+      .attr {
+        color: #7c3aed;
+      }
 
-    .attr {
-      color: #7c3aed;
-    }
+      .val {
+        color: #065f46;
+      }
 
-    .val {
-      color: #065f46;
-    }
+      .prop {
+        color: #7c3aed;
+      }
 
-    .prop {
-      color: #7c3aed;
-    }
+      .val2 {
+        color: #b45309;
+      }
 
-    .val2 {
-      color: #b45309;
-    }
+      .comment {
+        color: #9ca3af;
+        font-style: italic;
+      }
 
-    .comment {
-      color: #9ca3af;
-      font-style: italic;
-    }
+      .cheatsheet {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+        margin-top: 0.5rem;
+      }
 
-    .cheatsheet {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 0.5rem;
-    }
+      .cheatsheet th {
+        background: #f3f4f6;
+        padding: 0.5rem 0.75rem;
+        text-align: left;
+        border-bottom: 2px solid #e5e7eb;
+      }
 
-    .cheatsheet th {
-      background: #f3f4f6;
-      padding: 0.5rem 0.75rem;
-      text-align: left;
-      border-bottom: 2px solid #e5e7eb;
-    }
+      .cheatsheet td {
+        padding: 0.45rem 0.75rem;
+        border-bottom: 1px solid #f0f0f0;
+        vertical-align: top;
+      }
 
-    .cheatsheet td {
-      padding: 0.45rem 0.75rem;
-      border-bottom: 1px solid #f0f0f0;
-      vertical-align: top;
-    }
+      .cheatsheet tr:last-child td {
+        border-bottom: none;
+      }
 
-    .cheatsheet tr:last-child td {
-      border-bottom: none;
-    }
+      .demo-box {
+        border: 2px dashed #d1d5db;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        margin-top: 0.75rem;
+        background: #fafafa;
+      }
 
-    .demo-box {
-      border: 2px dashed #d1d5db;
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      margin-top: 0.75rem;
-      background: #fafafa;
-    }
+      .demo-box p {
+        margin: 0;
+      }
 
-    .demo-box p {
-      margin: 0;
-    }
+      .step-list {
+        padding-left: 1.2rem;
+        margin: 0.5rem 0 0;
+      }
 
-    .step-list {
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 0;
-    }
+      .step-list li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
 
-    .step-list li {
-      margin-bottom: 0.5rem;
-      line-height: 1.5;
-    }
+      .css-class-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
 
-    .css-class-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
+      .css-pill {
+        border-radius: 6px;
+        padding: 0.4rem 0.6rem;
+        text-align: center;
+        font-size: 0.82rem;
+        font-weight: bold;
+        font-family: "Space Mono", monospace;
+      }
 
-    .css-pill {
-      border-radius: 6px;
-      padding: 0.4rem 0.6rem;
-      text-align: center;
-      font-size: 0.82rem;
-      font-weight: bold;
-      font-family: 'Space Mono', monospace;
-    }
+      .breadcrumb {
+        padding: 0.75rem 2rem;
+        background: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
+        font-size: 0.85rem;
+      }
 
-    .breadcrumb {
-      padding: 0.75rem 2rem;
-      background: #f9fafb;
-      border-bottom: 1px solid #e5e7eb;
-      font-size: 0.85rem;
-    }
+      .breadcrumb a {
+        color: #6894ec;
+        text-decoration: none;
+      }
 
-    .breadcrumb a {
-      color: #6894ec;
-      text-decoration: none;
-    }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
 
-    .breadcrumb a:hover {
-      text-decoration: underline;
-    }
+      .card a {
+        color: #eca068;
+      }
 
-    .card a {
-      color: #eca068;
-    }
+      .full-width-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        border-top: 4px solid #eca068;
+        grid-column: 1 / -1;
+      }
 
-    .full-width-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      border-top: 4px solid #eca068;
-      grid-column: 1 / -1;
-    }
+      .full-width-card h2 {
+        margin-top: 0;
+      }
 
-    .full-width-card h2 {
-      margin-top: 0;
-    }
+      .cta-bar {
+        background: linear-gradient(135deg, #bc7afa, #6894ec);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 1rem;
+      }
 
-    .cta-bar {
-      background: linear-gradient(135deg, #bc7afa, #6894ec);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 1rem;
-    }
+      .cta-bar p {
+        margin: 0 0 1rem;
+        font-size: 1.05rem;
+      }
 
-    .cta-bar p {
-      margin: 0 0 1rem;
-      font-size: 1.05rem;
-    }
+      .cta-btn {
+        display: inline-block;
+        background: white;
+        color: #6d28d9;
+        font-weight: bold;
+        padding: 0.6rem 1.4rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
 
-    .cta-btn {
-      display: inline-block;
-      background: white;
-      color: #6d28d9;
-      font-weight: bold;
-      padding: 0.6rem 1.4rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
 
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-</head>
+  <body>
+    <div class="breadcrumb">
+      <a href="/">← Zurück zu deiner Seite</a>
+    </div>
 
-<body>
+    <div class="intro-hero">
+      <h1>HTML &amp; CSS – Eine Einführung</h1>
+      <p>Alles, was du brauchst, um deine eigene Webseite zu bauen.</p>
+    </div>
 
-  <div class="breadcrumb">
-    <a href="/">← Zurück zu deiner Seite</a>
-  </div>
-
-  <div class="intro-hero">
-    <h1>HTML &amp; CSS – Eine Einführung</h1>
-    <p>Alles, was du brauchst, um deine eigene Webseite zu bauen.</p>
-  </div>
-
-  <div class="intro-grid">
-
-    <!-- Was ist HTML? -->
-    <div class="card">
-      <span class="label label-html">HTML</span>
-      <h2>Was ist HTML?</h2>
-      <p>
-        <strong>HTML</strong> steht für <em>HyperText Markup Language</em>.
-        Es ist die Sprache, mit der du den <strong>Inhalt</strong> einer Webseite beschreibst –
-        also Text, Bilder, Links und Formulare.
-      </p>
-      <p>
-        HTML besteht aus sogenannten <strong>Tags</strong>. Ein Tag sagt dem Browser,
-        was ein Element ist. Die meisten Tags haben ein öffnendes und ein schließendes Tag:
-      </p>
-      <pre><span class="tag">&lt;p&gt;</span>Das ist ein Absatz.<span class="tag">&lt;/p&gt;</span>
+    <div class="intro-grid">
+      <!-- Was ist HTML? -->
+      <div class="card">
+        <span class="label label-html">HTML</span>
+        <h2>Was ist HTML?</h2>
+        <p>
+          <strong>HTML</strong> steht für <em>HyperText Markup Language</em>. Es
+          ist die Sprache, mit der du den <strong>Inhalt</strong> einer Webseite
+          beschreibst – also Text, Bilder, Links und Formulare.
+        </p>
+        <p>
+          HTML besteht aus sogenannten <strong>Tags</strong>. Ein Tag sagt dem
+          Browser, was ein Element ist. Die meisten Tags haben ein öffnendes und
+          ein schließendes Tag:
+        </p>
+        <pre><span class="tag">&lt;p&gt;</span>Das ist ein Absatz.<span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;h1&gt;</span>Das ist eine Überschrift.<span class="tag">&lt;/h1&gt;</span></pre>
-      <div class="demo-box">
-        <p><strong>So sieht es im Browser aus:</strong></p>
-        <h1 style="font-size:1.2rem;margin:0.3rem 0;">Das ist eine Überschrift.</h1>
-        <p style="margin:0.3rem 0;">Das ist ein Absatz.</p>
+        <div class="demo-box">
+          <p><strong>So sieht es im Browser aus:</strong></p>
+          <h1 style="font-size: 1.2rem; margin: 0.3rem 0">
+            Das ist eine Überschrift.
+          </h1>
+          <p style="margin: 0.3rem 0">Das ist ein Absatz.</p>
+        </div>
       </div>
 
+      <!-- HTML-Tags Cheatsheet -->
+      <div class="card pink-border">
+        <span class="label label-html">HTML</span>
+        <h2>Die wichtigsten Tags</h2>
+        <table class="cheatsheet">
+          <tr>
+            <th>Tag</th>
+            <th>Bedeutung</th>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;h1&gt; … &lt;h6&gt;</span></code>
+            </td>
+            <td>Überschriften (h1 = groß, h6 = klein)</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;p&gt;</span></code>
+            </td>
+            <td>Absatz (Paragraph)</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;strong&gt;</span></code>
+            </td>
+            <td><strong>Fett gedruckter</strong> Text</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;em&gt;</span></code>
+            </td>
+            <td><em>Kursiver</em> Text</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;a href="…"&gt;</span></code>
+            </td>
+            <td><a href="#" onclick="return false;">Ein Link</a></td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;img src="…"&gt;</span></code>
+            </td>
+            <td>Ein Bild</td>
+          </tr>
+          <tr>
+            <td>
+              <code
+                ><span class="tag">&lt;ul&gt;</span> &amp;
+                <span class="tag">&lt;li&gt;</span></code
+              >
+            </td>
+            <td>Liste mit Punkten</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="tag">&lt;div&gt;</span></code>
+            </td>
+            <td>Ein Container (zum Gruppieren)</td>
+          </tr>
+        </table>
+      </div>
 
-    </div>
+      <div class="card dark-background">
+        <span class="label label-html">Aufgabe 1</span>
+        <h2>Update HTML tag</h2>
+        <p>
+          Öffne deine index.html und finde die richtige Stelle zum anpassen:
+        </p>
+        <ul>
+          <li>
+            Ändere den h2 Tag auf
+            <a href="/index.html#section1">in deinem Abschnitt 1</a> zu h6.
+          </li>
+          <li>
+            Ändere den Text in einem &lt p &gt -Tag und schreib irgendetwas
+            rein, dass dir wichtig ist.
+          </li>
+        </ul>
+      </div>
 
-    <!-- HTML-Tags Cheatsheet -->
-    <div class="card pink-border">
-      <span class="label label-html">HTML</span>
-      <h2>Die wichtigsten Tags</h2>
-      <table class="cheatsheet">
-        <tr>
-          <th>Tag</th>
-          <th>Bedeutung</th>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;h1&gt; … &lt;h6&gt;</span></code></td>
-          <td>Überschriften (h1 = groß, h6 = klein)</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;p&gt;</span></code></td>
-          <td>Absatz (Paragraph)</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;strong&gt;</span></code></td>
-          <td><strong>Fett gedruckter</strong> Text</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;em&gt;</span></code></td>
-          <td><em>Kursiver</em> Text</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;a href="…"&gt;</span></code></td>
-          <td><a href="#" onclick="return false;">Ein Link</a></td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;img src="…"&gt;</span></code></td>
-          <td>Ein Bild</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;ul&gt;</span> &amp; <span class="tag">&lt;li&gt;</span></code></td>
-          <td>Liste mit Punkten</td>
-        </tr>
-        <tr>
-          <td><code><span class="tag">&lt;div&gt;</span></code></td>
-          <td>Ein Container (zum Gruppieren)</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="card dark-background">
-      <span class="label label-html">Aufgabe 1</span>
-      <h2>Update HTML tag</h2>
-      <ul>
-              <li>Ändere den h2 Tag auf <a href="/index.html#section1">deiner Seite</a> zu h6</li>
-
-              <li>Ändere den Text in einem &lt p &gt -Tag – schreib irgendetwas rein, das dir wichtig ist.</li>
-      </ul>
-    </div>
-
-    <!-- img -->
-    <div class="card purple-border">
-      <span class="label label-html">Bilder im HTML</span>
-      <h2>Bilder - Wie du sie hinzufügst</h2>
-      <p>
-        Bilder können über ein src-Attribut hinzugefügt werden. Dort kannst du zum Beispiel angeben wo ein Bild liegt.
-      </p>
-      <pre>
+      <!-- img -->
+      <div class="card purple-border">
+        <span class="label label-html">Bilder im HTML</span>
+        <h2>Bilder - Wie du sie hinzufügst</h2>
+        <p>
+          Bilder können über ein src-Attribut hinzugefügt werden. Dort kannst du
+          zum Beispiel angeben wo ein Bild liegt.
+        </p>
+        <pre>
 
 <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"bilder/bild1.jpg"</span>
      <span class="attr">alt</span>=<span class="val">"Mein Foto"</span> <span class="tag">/&gt;</span></pre>
-      <p>
-        Das <code><span class="attr">alt</span></code>-Attribut beim Bild ist ein kurzer
-        Beschreibungstext – wichtig für Menschen, die Screenreader benutzen.
-      </p>
-    </div>
+        <p>
+          Das <code><span class="attr">alt</span></code
+          >-Attribut beim Bild ist ein kurzer Beschreibungstext – wichtig für
+          Menschen, die Screenreader benutzen.
+        </p>
+      </div>
 
-    <div class="card dark-background">
-      <span class="label label-html">Aufgabe 2</span>
-      <h2>Füge ein Bild hinzu</h2>
-      <p> Suche dir im Internet ein Bild heraus, was du für dein Prototypen gebrauchen kannst.
-        Füge es in <a href="/index.html#section2">Abschnitt 2 </a> hinzu.</p>
-    </div>
+      <div class="card dark-background">
+        <span class="label label-html">Aufgabe 2</span>
+        <h2>Füge ein Bild hinzu</h2>
+        <p>
+          Suche dir im Internet ein Bild heraus, was du für dein Prototypen
+          gebrauchen kannst. Ändere das Bild in
+          <a href="/index.html#section4">Abschnitt 4 </a>.
+        </p>
+      </div>
 
-
-
-    <!-- Was ist CSS? -->
-    <div class="card orange-border">
-      <span class="label label-css">CSS</span>
-      <h2>Was ist CSS?</h2>
-      <p>
-        <strong>CSS</strong> steht für <em>Cascading Style Sheets</em>.
-        Während HTML den Inhalt beschreibt, kümmert sich CSS um das <strong>Aussehen</strong> –
-        Farben, Schriftarten, Abstände, Animationen.
-      </p>
-      <p>Eine CSS-Regel besteht aus einem <strong>Selektor</strong> und einer oder mehreren
-        <strong>Eigenschaften</strong>:</p>
-      <pre><span class="tag">p</span> {
+      <!-- Was ist CSS? -->
+      <div class="card orange-border">
+        <span class="label label-css">CSS</span>
+        <h2>Was ist CSS?</h2>
+        <p>
+          <strong>CSS</strong> steht für <em>Cascading Style Sheets</em>.
+          Während HTML den Inhalt beschreibt, kümmert sich CSS um das
+          <strong>Aussehen</strong> – Farben, Schriftarten, Abstände,
+          Animationen.
+        </p>
+        <p>
+          Eine CSS-Regel besteht aus einem <strong>Selektor</strong> und einer
+          oder mehreren <strong>Eigenschaften</strong>:
+        </p>
+        <pre><span class="tag">p</span> {
   <span class="prop">color</span>: <span class="val2">hotpink</span>;
   <span class="prop">font-size</span>: <span class="val2">20px</span>;
   <span class="prop">font-weight</span>: <span class="val2">bold</span>;
 }</pre>
-      <div class="demo-box">
-        <p style="color:hotpink;font-size:20px;font-weight:bold;margin:0;">
-          So sieht dieser Text dann aus!
-        </p>
+        <div class="demo-box">
+          <p
+            style="
+              color: hotpink;
+              font-size: 20px;
+              font-weight: bold;
+              margin: 0;
+            "
+          >
+            So sieht dieser Text dann aus!
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- CSS-Klassen -->
-    <div class="card green-border">
-      <span class="label label-css">CSS</span>
-      <h2>CSS-Klassen</h2>
-      <p>
-        Mit dem Attribut <code><span class="attr">class</span></code> kannst du einem
-        HTML-Element eine CSS-Klasse geben. In eurer <code>styles.css</code> sind
-        schon viele Klassen fertig – einfach draufschreiben und ausprobieren:
-      </p>
-      <pre><span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="val">"pink"</span><span class="tag">&gt;</span>Rosa Überschrift<span class="tag">&lt;/h2&gt;</span>
+      <!-- CSS-Klassen -->
+      <div class="card green-border">
+        <span class="label label-css">CSS</span>
+        <h2>CSS-Klassen</h2>
+        <p>
+          Mit dem Attribut <code><span class="attr">class</span></code> kannst
+          du einem HTML-Element eine CSS-Klasse geben. In eurer
+          <code>styles.css</code> sind schon viele Klassen fertig – einfach
+          draufschreiben und ausprobieren:
+        </p>
+        <pre><span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="val">"pink"</span><span class="tag">&gt;</span>Rosa Überschrift<span class="tag">&lt;/h2&gt;</span>
 <span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"big"</span><span class="tag">&gt;</span>Großer Text<span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"small"</span><span class="tag">&gt;</span>Kleiner Text<span class="tag">&lt;/p&gt;</span></pre>
-      <div class="css-class-grid">
-        <div class="css-pill" style="background:#fce7fd;color:#eb95ec;">.pink</div>
-        <div class="css-pill" style="background:#e8f5e9;color:#8de38c;">.green</div>
-        <div class="css-pill" style="background:#ede9fe;color:#bc7afa;">.purple</div>
-        <div class="css-pill" style="background:#dbeafe;color:#6894ec;">.blue</div>
-        <div class="css-pill" style="background:#fef9c3;color:#ecd868;">.yellow</div>
-        <div class="css-pill" style="background:#fff3e0;color:#eca068;">.orange</div>
-        <div class="css-pill" style="background:#f3f4f6;color:#555;">.big</div>
-        <div class="css-pill" style="background:#f3f4f6;color:#555;font-size:0.7rem;">.small</div>
+        <div class="css-class-grid">
+          <div class="css-pill" style="background: #fce7fd; color: #eb95ec">
+            .pink
+          </div>
+          <div class="css-pill" style="background: #e8f5e9; color: #8de38c">
+            .green
+          </div>
+          <div class="css-pill" style="background: #ede9fe; color: #bc7afa">
+            .purple
+          </div>
+          <div class="css-pill" style="background: #dbeafe; color: #6894ec">
+            .blue
+          </div>
+          <div class="css-pill" style="background: #fef9c3; color: #ecd868">
+            .yellow
+          </div>
+          <div class="css-pill" style="background: #fff3e0; color: #eca068">
+            .orange
+          </div>
+          <div class="css-pill" style="background: #f3f4f6; color: #555">
+            .big
+          </div>
+          <div
+            class="css-pill"
+            style="background: #f3f4f6; color: #555; font-size: 0.7rem"
+          >
+            .small
+          </div>
+        </div>
       </div>
-    </div>
 
+      <!-- CSS Inline-Styles -->
+      <div class="card pink-border">
+        <span class="label label-css">CSS</span>
+        <h2>Farben &amp; Abstände in CSS</h2>
+        <p>CSS kennt viele Eigenschaften. Hier die häufigsten:</p>
+        <table class="cheatsheet">
+          <tr>
+            <th>Eigenschaft</th>
+            <th>Bedeutung</th>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">color</span></code>
+            </td>
+            <td>Textfarbe</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">background-color</span></code>
+            </td>
+            <td>Hintergrundfarbe</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">font-size</span></code>
+            </td>
+            <td>Schriftgröße (z. B. <code>16px</code>)</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">font-weight</span></code>
+            </td>
+            <td><code>bold</code> = fett</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">text-align</span></code>
+            </td>
+            <td><code>center</code>, <code>left</code>, <code>right</code></td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">padding</span></code>
+            </td>
+            <td>Innenabstand</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">margin</span></code>
+            </td>
+            <td>Außenabstand</td>
+          </tr>
+          <tr>
+            <td>
+              <code><span class="prop">border-radius</span></code>
+            </td>
+            <td>Runde Ecken (z. B. <code>8px</code>)</td>
+          </tr>
+        </table>
+      </div>
 
-    <div class="card dark-background">
-      <span class="label label-html">Aufgabe 3</span>
-      <h2>New Color</h2>
-      <p> Ändere die Farbe einer Section mit Hilfe des class Attributes. <a href="/index.html#section3">Abschnitt 3 </a></p>
-    </div>
-
-
-    <!-- CSS Inline-Styles -->
-    <div class="card pink-border">
-      <span class="label label-css">CSS</span>
-      <h2>Farben &amp; Abstände in CSS</h2>
-      <p>CSS kennt viele Eigenschaften. Hier die häufigsten:</p>
-      <table class="cheatsheet">
-        <tr>
-          <th>Eigenschaft</th>
-          <th>Bedeutung</th>
-        </tr>
-        <tr>
-          <td><code><span class="prop">color</span></code></td>
-          <td>Textfarbe</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">background-color</span></code></td>
-          <td>Hintergrundfarbe</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">font-size</span></code></td>
-          <td>Schriftgröße (z. B. <code>16px</code>)</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">font-weight</span></code></td>
-          <td><code>bold</code> = fett</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">text-align</span></code></td>
-          <td><code>center</code>, <code>left</code>, <code>right</code></td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">padding</span></code></td>
-          <td>Innenabstand</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">margin</span></code></td>
-          <td>Außenabstand</td>
-        </tr>
-        <tr>
-          <td><code><span class="prop">border-radius</span></code></td>
-          <td>Runde Ecken (z. B. <code>8px</code>)</td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- Jetzt bist du dran -->
-    <div class="full-width-card">
-      <span class="label label-try">Ausprobieren</span>
-      <h2>Themen</h2>
-      <p>Öffne <code>index.html</code> im Editor und probiere diese Dinge aus:</p>
-      <ol class="step-list">
-
-        <li>
-          Ändere das Theme deiner Seite! Ersetze in <code>index.html</code> das öffnende
-          <code>&lt;body&gt;</code>-Tag durch eines der folgenden:
-          <pre
-            style="margin-top:0.4rem;"><span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-fun"</span><span class="tag">&gt;</span>
+      <div class="card dark-background">
+        <span class="label label-html">Aufgabe 3</span>
+        <h2>Ändere die Farbe</h2>
+        <p>
+          Setze eine Hintergrundfarbe für die Section
+          <a href="/index.html#section3">Abschnitt 3 </a> mit Hilfe des class
+          Attributes und den Klassen für Hintergrundfarben.
+        </p>
+      </div>
+      <!-- Jetzt bist du dran -->
+      <div class="full-width-card">
+        <span class="label label-try">Ausprobieren</span>
+        <h2>Themen</h2>
+        <p>
+          Öffne <code>index.html</code> im Editor und probiere diese Dinge aus:
+        </p>
+        <ol class="step-list">
+          <li>
+            Ändere das Theme deiner Seite! Ersetze in
+            <code>index.html</code> das öffnende <code>&lt;body&gt;</code>-Tag
+            durch eines der folgenden:
+            <pre
+              style="margin-top: 0.4rem"
+            ><span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-fun"</span><span class="tag">&gt;</span>
 <span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-retro"</span><span class="tag">&gt;</span>
 <span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-slick"</span><span class="tag">&gt;</span>
 <span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-zine"</span><span class="tag">&gt;</span></pre>
-        </li>
-        <li>
-          Trau dich, in <code>styles.css</code> eine Farbe zu ändern –
-          zum Beispiel die Hintergrundfarbe von <code>body</code>!
-        </li>
-      </ol>
-    </div>
+          </li>
+          <li>
+            Trau dich, in <code>styles.css</code> eine Farbe zu ändern – zum
+            Beispiel die Hintergrundfarbe von <code>body</code>!
+          </li>
+        </ol>
+      </div>
 
-    <!-- Tipp-Box -->
-    <div class="full-width-card" style="border-top-color: #8de38c;">
-      <span class="label label-tipp">Tipp</span>
-      <h2>Hilfreiche Browser-Tricks</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:0.5rem;">
-        <div>
-          <strong>Browser-Entwicklertools öffnen</strong><br>
-          Drücke <kbd style="background:#f3f4f6;border:1px solid #ccc;border-radius:4px;padding:1px 6px;">F12</kbd>
-          oder Rechtsklick → <em>Untersuchen</em>.
-          Du kannst dort live CSS ändern und sehen wie deine Seite aussieht – ohne etwas kaputtzumachen!
-        </div>
-        <div>
-          <strong>Seite neu laden</strong><br>
-          Nach jeder Änderung im Editor einfach
-          <kbd style="background:#f3f4f6;border:1px solid #ccc;border-radius:4px;padding:1px 6px;">Strg+S</kbd>
-          speichern und im Browser
-          <kbd style="background:#f3f4f6;border:1px solid #ccc;border-radius:4px;padding:1px 6px;">F5</kbd>
-          drücken – schon siehst du deine Änderungen.
-        </div>
-        <div>
-          <strong>Fehler finden</strong><br>
-          Wenn etwas nicht klappt: prüfe, ob jedes öffnende Tag auch ein schließendes hat.
-          Der Browser ist sehr verständnisvoll – aber vergessene
-          <code>&lt;/p&gt;</code> können das Layout durcheinanderbringen.
+      <!-- Tipp-Box -->
+      <div class="full-width-card" style="border-top-color: #8de38c">
+        <span class="label label-tipp">Tipp</span>
+        <h2>Hilfreiche Browser-Tricks</h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+          "
+        >
+          <div>
+            <strong>Browser-Entwicklertools öffnen</strong><br />
+            Drücke
+            <kbd
+              style="
+                background: #f3f4f6;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 1px 6px;
+              "
+              >F12</kbd
+            >
+            oder Rechtsklick → <em>Untersuchen</em>. Du kannst dort live CSS
+            ändern und sehen wie deine Seite aussieht – ohne etwas
+            kaputtzumachen!
+          </div>
+          <div>
+            <strong>Seite neu laden</strong><br />
+            Nach jeder Änderung im Editor einfach
+            <kbd
+              style="
+                background: #f3f4f6;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 1px 6px;
+              "
+              >Strg+S</kbd
+            >
+            speichern und im Browser
+            <kbd
+              style="
+                background: #f3f4f6;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 1px 6px;
+              "
+              >F5</kbd
+            >
+            drücken – schon siehst du deine Änderungen.
+          </div>
+          <div>
+            <strong>Fehler finden</strong><br />
+            Wenn etwas nicht klappt: prüfe, ob jedes öffnende Tag auch ein
+            schließendes hat. Der Browser ist sehr verständnisvoll – aber
+            vergessene
+            <code>&lt;/p&gt;</code> können das Layout durcheinanderbringen.
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <div class="cta-bar">
-    <p>Bereit? Öffne deine Seite und leg los!</p>
-    <a class="cta-btn" href="/">Zu meiner Seite →</a>
-  </div>
-
-</body>
-
+    <div class="cta-bar">
+      <p>Bereit? Öffne deine Seite und leg los!</p>
+      <a class="cta-btn" href="/">Zu meiner Seite →</a>
+    </div>
+  </body>
 </html>

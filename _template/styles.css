@@ -78,18 +78,35 @@ section {
   margin: 10px;
   background-color: #fff;
   border-radius: 5px;
-  flex-grow: 1;
 }
 
 .horizontal-section {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  flex-wrap: nowrap;
   width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.horizontal-section.horizontal-section--full-width-image {
+  max-width: 100%;
+  background-image: url("./bilder/bild.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+}
+
+.horizontal-section .horizontal-section-text {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+
 }
 
 .horizontal-section section {
+  flex: 1 50%;
   min-width: 0;
 }
 

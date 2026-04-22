@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Intro: HTML & CSS – Girls'Day@DigitalService</title>
     <style>
-      
       .intro-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -258,23 +257,19 @@
   </head>
 
   <body>
-
-
     <header class="header-hero">
       <h1>HTML &amp; CSS – Eine Einführung</h1>
       <p>Alles, was du brauchst, um deine eigene Webseite zu bauen.</p>
     </header>
-  <nav>
-    <a href="/coding_intro.html" class="active">Coding Intro</a>
-    <a href="/html_elements.html">HTML Elements</a>
-    <a href="/html_elements.html" >YOUR PAGE</a>
-  </nav>
+    <nav>
+      <a href="/coding_intro.html" class="active">Coding Intro</a>
+      <a href="/html_elements.html">HTML Elements</a>
+      <a href="/html_elements.html">YOUR PAGE</a>
+    </nav>
 
-      <div class="breadcrumb">
+    <div class="breadcrumb">
       <a href="/">← Zurück zu deiner Seite</a>
     </div>
-
-  
 
     <div class="intro-grid">
       <!-- Was ist HTML? -->
@@ -364,25 +359,6 @@
           </tr>
         </table>
       </div>
-
-      <div class="card dark-background">
-        <span class="label label-html">Aufgabe 1</span>
-        <h2>Update HTML tag</h2>
-        <p>
-          Öffne deine index.html und finde die richtige Stelle zum anpassen:
-        </p>
-        <ul>
-          <li>
-            Ändere den h2 Tag auf
-            <a href="/index.html#section1">in deinem Abschnitt 1</a> zu h6.
-          </li>
-          <li>
-            Ändere den Text in einem &lt p &gt -Tag und schreib irgendetwas
-            rein, dass dir wichtig ist.
-          </li>
-        </ul>
-      </div>
-
       <!-- img -->
       <div class="card purple-border">
         <span class="label label-html">Bilder im HTML</span>
@@ -399,16 +375,6 @@
           Das <code><span class="attr">alt</span></code
           >-Attribut beim Bild ist ein kurzer Beschreibungstext – wichtig für
           Menschen, die Screenreader benutzen.
-        </p>
-      </div>
-
-      <div class="card dark-background">
-        <span class="label label-html">Aufgabe 2</span>
-        <h2>Füge ein Bild hinzu</h2>
-        <p>
-          Suche dir im Internet ein Bild heraus, was du für dein Prototypen
-          gebrauchen kannst. Ändere das Bild in
-          <a href="/index.html#section4">Abschnitt 4 </a>.
         </p>
       </div>
 
@@ -549,40 +515,35 @@
           </tr>
         </table>
       </div>
-
-      <div class="card dark-background">
-        <span class="label label-html">Aufgabe 3</span>
-        <h2>Ändere die Farbe</h2>
-        <p>
-          Setze eine Hintergrundfarbe für die Section
-          <a href="/index.html#section3">Abschnitt 3 </a> mit Hilfe des class
-          Attributes und den Klassen für Hintergrundfarben.
-        </p>
+      <!-- Aufgabenkarte -->
+      <div class="full-width-card" style="border-top-color: #6894ec">
+        <span class="label label-try">Aufgabe</span>
+        <h2>Baue deine Seite mit eigenen Elementen</h2>
+        <ol class="step-list">
+          <li>Öffne die <code>html_elements.html</code>.</li>
+          <li>Finde die Elemente, die du auf deiner Seite haben möchtest.</li>
+          <li>Kopiere sie in deine <code>index.html</code> Seite.</li>
+          <li>
+            Wiederhole das für alle weiteren Elemente, die du benutzen möchtest.
+          </li>
+        </ol>
       </div>
       <!-- Jetzt bist du dran -->
       <div class="full-width-card">
         <span class="label label-try">Ausprobieren</span>
-        <h2>Themen</h2>
+        <h2>Themes</h2>
         <p>
-          Öffne <code>index.html</code> im Editor und probiere diese Dinge aus:
+          Mit unseren fertigen Themes, kannst du ganz einfach das Design deiner
+          ganzen Seite oder einzelner Elemente anpassen.
         </p>
-        <ol class="step-list">
-          <li>
-            Ändere das Theme deiner Seite! Ersetze in
-            <code>index.html</code> das öffnende <code>&lt;body&gt;</code>-Tag
-            durch eines der folgenden:
-            <pre
-              style="margin-top: 0.4rem"
-            ><span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-fun"</span><span class="tag">&gt;</span>
-<span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-retro"</span><span class="tag">&gt;</span>
-<span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-slick"</span><span class="tag">&gt;</span>
-<span class="tag">&lt;body</span> <span class="attr">class</span>=<span class="val">"theme-zine"</span><span class="tag">&gt;</span></pre>
-          </li>
-          <li>
-            Trau dich, in <code>styles.css</code> eine Farbe zu ändern – zum
-            Beispiel die Hintergrundfarbe von <code>body</code>!
-          </li>
-        </ol>
+        Füge dazu an das entsprechende Element in deiner
+        <code>index.html</code> eine der folgenden class-Attribute hinzu:
+        <pre style="margin-top: 0.4rem">
+          <span>class</span>=<span class="val">"theme-fun"</span>
+          <span>class</span>=<span class="val">"theme-retro"</span>
+          <span>class</span>=<span class="val">"theme-slick"</span>
+          <span>class</span>=<span class="val">"theme-zine"</span>
+        </pre>
       </div>
 
       <!-- Tipp-Box -->
@@ -647,7 +608,6 @@
         </div>
       </div>
     </div>
-
     <div class="cta-bar">
       <p>Bereit? Öffne deine Seite und leg los!</p>
       <a class="cta-btn" href="/">Zu meiner Seite →</a>

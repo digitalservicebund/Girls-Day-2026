@@ -39,6 +39,23 @@ body {
         opacity: 0.95;
       }
 
+      header.header-hero.header-hero-background-image {
+        /* background: linear-gradient(
+          135deg,
+          #6894ec 0%,
+          #bc7afa 50%,
+          #eb95ec 100%
+        ); */
+        background-color: #f76f00;
+        background: url(./bilder/bild.jpg);
+        background-size: cover;
+        background-position: center ;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+        height: 210px;
+      }
+
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
@@ -78,7 +95,7 @@ nav a[aria-current="page"] {
   color: #2a2a2a;
 }
 
-nav.active {
+nav a.active {
   background-color: var(--primary-color );
   color: #2a2a2a;
 }

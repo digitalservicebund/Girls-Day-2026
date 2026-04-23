@@ -298,6 +298,134 @@
       </div>
 
       <!-- HTML-Tags Cheatsheet -->
+      <!-- img -->
+      <div class="card purple-border">
+        <span class="label label-html">Bilder im HTML</span>
+        <h2>So fügst du Bilder hinzu</h2>
+        <p>
+          Für Bilder brauchst du ein
+          <code><span class="attr">img</span></code> Tag als Grundgerüst. Über
+          das <code><span class="attr">src</span></code
+          >-Attribut gibst du an wo ein Bild liegt.
+        </p>
+        <pre>
+
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"bilder/bild1.jpg"</span>
+     <span class="attr">alt</span>=<span class="val">"Mein Foto"</span> <span class="tag">/&gt;</span></pre>
+        <p>
+          Das <code><span class="attr">alt</span></code
+          >-Attribut beim Bild ist ein kurzer Beschreibungstext – wichtig für
+          Menschen, die Screenreader benutzen.
+        </p>
+      </div>
+
+      <!-- Was ist CSS? -->
+      <div class="card orange-border">
+        <span class="label label-css">CSS</span>
+        <h2>Was ist CSS?</h2>
+        <p>
+          <strong>CSS</strong> steht für <em>Cascading Style Sheets</em>.
+          Während HTML den Inhalt beschreibt, kümmert sich CSS um das
+          <strong>Aussehen</strong> – Farben, Schriftarten, Abstände,
+          Animationen.
+        </p>
+        <p>
+          Eine CSS-Regel besteht aus einem <strong>Selektor</strong> und einer
+          oder mehreren <strong>Eigenschaften</strong>:
+        </p>
+        <pre><span class="tag">p</span> {
+  <span class="prop">color</span>: <span class="val2">hotpink</span>;
+  <span class="prop">font-size</span>: <span class="val2">20px</span>;
+  <span class="prop">font-weight</span>: <span class="val2">bold</span>;
+}</pre>
+        <div class="demo-box">
+          <p
+            style="
+              color: hotpink;
+              font-size: 20px;
+              font-weight: bold;
+              margin: 0;
+            "
+          >
+            So sieht dieser Text dann aus!
+          </p>
+        </div>
+      </div>
+
+      <!-- CSS-Klassen -->
+      <div class="card green-border">
+        <span class="label label-css">CSS</span>
+        <h2>CSS-Klassen</h2>
+        <p>
+          Mit dem Attribut <code><span class="attr">class</span></code> kannst
+          du HTML-Element gruppieren, die die gleichen Eigenschaften bekommen
+          sollen. In eurer <code>styles.css</code> sind schon viele Klassen
+          fertig – einfach draufschreiben und ausprobieren:
+        </p>
+        <pre><span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="val">"pink"</span><span class="tag">&gt;</span>Rosa Überschrift<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"big"</span><span class="tag">&gt;</span>Großer Text<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"small"</span><span class="tag">&gt;</span>Kleiner Text<span class="tag">&lt;/p&gt;</span></pre>
+        <div class="css-class-grid">
+          <div class="css-pill" style="background: #fce7fd; color: #eb95ec">
+            .pink
+          </div>
+          <div class="css-pill" style="background: #e8f5e9; color: #8de38c">
+            .green
+          </div>
+          <div class="css-pill" style="background: #ede9fe; color: #bc7afa">
+            .purple
+          </div>
+          <div class="css-pill" style="background: #dbeafe; color: #6894ec">
+            .blue
+          </div>
+          <div class="css-pill" style="background: #fef9c3; color: #ecd868">
+            .yellow
+          </div>
+          <div class="css-pill" style="background: #fff3e0; color: #eca068">
+            .orange
+          </div>
+          <div class="css-pill" style="background: #f3f4f6; color: #555">
+            .big
+          </div>
+          <div
+            class="css-pill"
+            style="background: #f3f4f6; color: #555; font-size: 0.7rem"
+          >
+            .small
+          </div>
+        </div>
+      </div>
+      <!-- Aufgabenkarte -->
+      <div class="full-width-card" style="border-top-color: #6894ec">
+        <span class="label label-try">Aufgabe</span>
+        <h2>Baue deine Seite mit eigenen Elementen</h2>
+        <ol class="step-list">
+          <li>Öffne die <code>html_elements.html</code>.</li>
+          <li>Finde die Elemente, die du auf deiner Seite haben möchtest.</li>
+          <li>Kopiere sie in deine <code>index.html</code> Seite.</li>
+          <li>
+            Wiederhole das für alle weiteren Elemente, die du benutzen möchtest.
+          </li>
+        </ol>
+      </div>
+      <!-- Jetzt bist du dran -->
+      <div class="full-width-card">
+        <span class="label label-try">Ausprobieren</span>
+        <h2>Themes</h2>
+        <p>
+          Mit unseren fertigen Themes, kannst du ganz einfach das Design deiner
+          ganzen Seite oder einzelner Elemente anpassen.
+        </p>
+        Füge dazu an das entsprechende Element in deiner
+        <code>index.html</code> eine der folgenden class-Attribute hinzu:
+        <pre style="margin-top: 0.4rem">
+          <span>class</span>=<span class="val">"theme-fun"</span>
+          <span>class</span>=<span class="val">"theme-retro"</span>
+          <span>class</span>=<span class="val">"theme-slick"</span>
+          <span>class</span>=<span class="val">"theme-zine"</span>
+        </pre>
+      </div>
+      <!-- HTML Cheatsheet -->
       <div class="card pink-border">
         <span class="label label-html">HTML</span>
         <h2>Die wichtigsten Tags</h2>
@@ -359,101 +487,6 @@
           </tr>
         </table>
       </div>
-      <!-- img -->
-      <div class="card purple-border">
-        <span class="label label-html">Bilder im HTML</span>
-        <h2>Bilder - Wie du sie hinzufügst</h2>
-        <p>
-          Bilder können über ein src-Attribut hinzugefügt werden. Dort kannst du
-          zum Beispiel angeben wo ein Bild liegt.
-        </p>
-        <pre>
-
-<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"bilder/bild1.jpg"</span>
-     <span class="attr">alt</span>=<span class="val">"Mein Foto"</span> <span class="tag">/&gt;</span></pre>
-        <p>
-          Das <code><span class="attr">alt</span></code
-          >-Attribut beim Bild ist ein kurzer Beschreibungstext – wichtig für
-          Menschen, die Screenreader benutzen.
-        </p>
-      </div>
-
-      <!-- Was ist CSS? -->
-      <div class="card orange-border">
-        <span class="label label-css">CSS</span>
-        <h2>Was ist CSS?</h2>
-        <p>
-          <strong>CSS</strong> steht für <em>Cascading Style Sheets</em>.
-          Während HTML den Inhalt beschreibt, kümmert sich CSS um das
-          <strong>Aussehen</strong> – Farben, Schriftarten, Abstände,
-          Animationen.
-        </p>
-        <p>
-          Eine CSS-Regel besteht aus einem <strong>Selektor</strong> und einer
-          oder mehreren <strong>Eigenschaften</strong>:
-        </p>
-        <pre><span class="tag">p</span> {
-  <span class="prop">color</span>: <span class="val2">hotpink</span>;
-  <span class="prop">font-size</span>: <span class="val2">20px</span>;
-  <span class="prop">font-weight</span>: <span class="val2">bold</span>;
-}</pre>
-        <div class="demo-box">
-          <p
-            style="
-              color: hotpink;
-              font-size: 20px;
-              font-weight: bold;
-              margin: 0;
-            "
-          >
-            So sieht dieser Text dann aus!
-          </p>
-        </div>
-      </div>
-
-      <!-- CSS-Klassen -->
-      <div class="card green-border">
-        <span class="label label-css">CSS</span>
-        <h2>CSS-Klassen</h2>
-        <p>
-          Mit dem Attribut <code><span class="attr">class</span></code> kannst
-          du einem HTML-Element eine CSS-Klasse geben. In eurer
-          <code>styles.css</code> sind schon viele Klassen fertig – einfach
-          draufschreiben und ausprobieren:
-        </p>
-        <pre><span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="val">"pink"</span><span class="tag">&gt;</span>Rosa Überschrift<span class="tag">&lt;/h2&gt;</span>
-<span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"big"</span><span class="tag">&gt;</span>Großer Text<span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p</span>  <span class="attr">class</span>=<span class="val">"small"</span><span class="tag">&gt;</span>Kleiner Text<span class="tag">&lt;/p&gt;</span></pre>
-        <div class="css-class-grid">
-          <div class="css-pill" style="background: #fce7fd; color: #eb95ec">
-            .pink
-          </div>
-          <div class="css-pill" style="background: #e8f5e9; color: #8de38c">
-            .green
-          </div>
-          <div class="css-pill" style="background: #ede9fe; color: #bc7afa">
-            .purple
-          </div>
-          <div class="css-pill" style="background: #dbeafe; color: #6894ec">
-            .blue
-          </div>
-          <div class="css-pill" style="background: #fef9c3; color: #ecd868">
-            .yellow
-          </div>
-          <div class="css-pill" style="background: #fff3e0; color: #eca068">
-            .orange
-          </div>
-          <div class="css-pill" style="background: #f3f4f6; color: #555">
-            .big
-          </div>
-          <div
-            class="css-pill"
-            style="background: #f3f4f6; color: #555; font-size: 0.7rem"
-          >
-            .small
-          </div>
-        </div>
-      </div>
 
       <!-- CSS Inline-Styles -->
       <div class="card pink-border">
@@ -514,36 +547,6 @@
             <td>Runde Ecken (z. B. <code>8px</code>)</td>
           </tr>
         </table>
-      </div>
-      <!-- Aufgabenkarte -->
-      <div class="full-width-card" style="border-top-color: #6894ec">
-        <span class="label label-try">Aufgabe</span>
-        <h2>Baue deine Seite mit eigenen Elementen</h2>
-        <ol class="step-list">
-          <li>Öffne die <code>html_elements.html</code>.</li>
-          <li>Finde die Elemente, die du auf deiner Seite haben möchtest.</li>
-          <li>Kopiere sie in deine <code>index.html</code> Seite.</li>
-          <li>
-            Wiederhole das für alle weiteren Elemente, die du benutzen möchtest.
-          </li>
-        </ol>
-      </div>
-      <!-- Jetzt bist du dran -->
-      <div class="full-width-card">
-        <span class="label label-try">Ausprobieren</span>
-        <h2>Themes</h2>
-        <p>
-          Mit unseren fertigen Themes, kannst du ganz einfach das Design deiner
-          ganzen Seite oder einzelner Elemente anpassen.
-        </p>
-        Füge dazu an das entsprechende Element in deiner
-        <code>index.html</code> eine der folgenden class-Attribute hinzu:
-        <pre style="margin-top: 0.4rem">
-          <span>class</span>=<span class="val">"theme-fun"</span>
-          <span>class</span>=<span class="val">"theme-retro"</span>
-          <span>class</span>=<span class="val">"theme-slick"</span>
-          <span>class</span>=<span class="val">"theme-zine"</span>
-        </pre>
       </div>
 
       <!-- Tipp-Box -->

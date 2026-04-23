@@ -158,7 +158,7 @@ section {
   justify-content: center;
 }
 
-.sec.horizontal-section__background-image-1 {
+.background-image-1 {
   max-width: 100%;
   background-image: url("https://www.stadefrance.com/sites/default/files/styles/main_edito/public/2022-09/stromae_760x480_couv.jpg.webp?itok=rCmeHyda");
   background-size: cover;
@@ -168,7 +168,17 @@ section {
   text-align: center;
 }
 
-.horizontal-section.horizontal-section__background-image-2 {
+.background-image-2 {
+  max-width: 100%;
+  background-image: url("https://www.stadefrance.com/sites/default/files/styles/main_edito/public/2022-09/stromae_760x480_couv.jpg.webp?itok=rCmeHyda");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.background-image-3 {
   max-width: 100%;
   background-image: url("https://backend.xpn.org/app/uploads/2024/04/MaggieRogers-16.jpg");
   background-size: cover;
@@ -178,8 +188,29 @@ section {
   text-align: center;
 }
 
-.horizontal-section.horizontal-section__background-image-3 {
+.background-image-4 {
+  background-image: url(https://media.pitchfork.com/photos/66f306f9a2d52e3bd3b6bd44/master/w_775%2Cc_limit/Charli-XCX-Troye-Sivan.jpg);
   max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.background-image-5 {
+  max-width: 100%;
+  background-image: url("https://www.loopearplugs.com/cdn/shop/articles/applause-audience-band-167636_8a2ad979-d6bb-48e8-8c90-8810a35cdf5d.jpg?v=1702892933&width=2000");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.background-image-6 {
+  max-width: 100%;
+  background-image: url("https://www.stadefrance.com/sites/default/files/styles/main_edito/public/2022-09/stromae_760x480_couv.jpg.webp?itok=rCmeHyda");
   background-size: cover;
   background-position: center;
   min-height: 60vh;
@@ -204,40 +235,7 @@ section {
   height: auto;
 }
 
-/* =========================================================
-   COLOR UTILITY CLASSES
-   ========================================================= */
-.pink   { color: #eb95ec; }
-.green  { color: #8de38c; }
-.purple { color: #bc7afa; }
-.blue   { color: #6894ec; }
-.yellow { color: #ecd868; }
-.orange { color: #eca068; }
-.black  { color: #000; }
-.white  { color: #fff; }
 
-.background-pink   { background-color: #eb95ec; }
-.background-green  { background-color: #8de38c; }
-.background-purple { background-color: #bc7afa; }
-.background-blue   { background-color: #6894ec; }
-.background-yellow { background-color: #ecd868; }
-.background-orange { background-color: #eca068; }
-.background-black  { background-color: #000; }
-.background-white  { background-color: #fff; }
-
-/* =========================================================
-   SIZE UTILITY CLASSES
-   ========================================================= */
-.very-big { font-size: 48px; }
-.big      { font-size: 24px; }
-.small    { font-size: 12px; }
-
-/* =========================================================
-   SPACING & ALIGNMENT UTILITIES
-   ========================================================= */
-.padding-0   { padding: 0; }
-.margin-0    { margin: 0; }
-.text-center { text-align: center; }
 
 
 /* =========================================================
@@ -567,3 +565,43 @@ section {
   0%   { opacity: 1; transform: translate(0, 0); }
   100% { opacity: 0; transform: translate(30px, -40px); }
 }
+
+
+/* =========================================================
+   COLOR UTILITY CLASSES
+   ========================================================= */
+.pink   { color: #eb95ec; }
+.green  { color: #8de38c; }
+.purple { color: #bc7afa; }
+.blue   { color: #6894ec; }
+.yellow { color: #ecd868; }
+.orange { color: #eca068; }
+.black  { color: #000; }
+.white  { color: #fff; }
+
+.background-pink   { background-color: #eb95ec; }
+.background-green  { background-color: #8de38c; }
+.background-purple { background-color: #bc7afa; }
+.background-blue   { background-color: #6894ec; }
+.background-yellow { background-color: #ecd868; }
+.background-orange { background-color: #eca068; }
+.background-black  { background-color: #000; }
+.background-white  { background-color: #fff; }
+
+/* =========================================================
+   SIZE UTILITY CLASSES
+   ========================================================= */
+.very-big { font-size: 48px; }
+.big      { font-size: 24px; }
+.small    { font-size: 12px; }
+
+/* =========================================================
+   SPACING & ALIGNMENT UTILITIES
+   ========================================================= */
+.padding-0   { padding: 0; }
+.margin-0    { margin: 0; }
+.margin-small    { margin: 8px; }
+.margin-medium    { margin: 24px; }
+.text-center { text-align: center; }
+.text-right { text-align: end; }
+.round {border-radius: 150px;}

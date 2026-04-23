@@ -13,48 +13,36 @@ body {
 /* =========================================================
    HEADER
    ========================================================= */
-header.header-hero {
-  /* background: linear-gradient(
-          135deg,
-          #6894ec 0%,
-          #bc7afa 50%,
-          #eb95ec 100%
-        ); */
-  background-color: #f76f00;
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
-  height: 210px;
-}
+      header.header-hero {
+        background-color: #f76f00;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+        height: 210px;
+      }
 
-header.header-hero h1 {
-  font-size: 2.2rem;
-  margin: 0 0 0.5rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
+      header.header-hero h1 {
+        font-size: 2.2rem;
+        margin: 0 0 0.5rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
 
-header.header-hero p {
-  font-size: 1.1rem;
-  margin: 0;
-  opacity: 0.95;
-}
+      header.header-hero p {
+        font-size: 1.1rem;
+        margin: 0;
+        opacity: 0.95;
+      }
 
-header.header-hero.header-hero-background-image {
-  /* background: linear-gradient(
-          135deg,
-          #6894ec 0%,
-          #bc7afa 50%,
-          #eb95ec 100%
-        ); */
-  background-color: #f76f00;
-  background: url(./bilder/bild.jpg);
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
-  height: 210px;
-}
+      header.header-hero.header-hero-background-image {
+        background-color: #f76f00;
+        background: url(https://www.rollingstone.com/wp-content/uploads/2018/06/rs-14068-20140114-arcadefire-x1800-1389721067.jpg?w=1581&h=1037&crop=1);
+        background-size: cover;
+        /* background-position: center ; */
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+        height: 500px;
+      }
 
 h1 {
   font-weight: bold;
@@ -72,7 +60,7 @@ nav {
   gap: 0.25rem;
   padding: 0.75rem 1rem;
   background-color: #2a2a2a;
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color );
 }
 
 nav a {
@@ -86,7 +74,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color );
   color: #2a2a2a;
 }
 
@@ -96,7 +84,7 @@ nav a[aria-current="page"] {
 }
 
 nav a.active {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color );
   color: #2a2a2a;
 }
 
@@ -128,8 +116,8 @@ section.page-nav a {
 }
 
 section.page-nav a:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-color );
+  border-color: var(--primary-color );
   color: #fff;
 }
 
@@ -143,8 +131,8 @@ main {
 section {
   padding: 20px;
   margin: 10px;
-  background-color: #fff;
   border-radius: 5px;
+  background-color: white;
 }
 
 /* =========================================================
@@ -210,7 +198,7 @@ section {
 
 .background-image-6 {
   max-width: 100%;
-  background-image: url("https://www.stadefrance.com/sites/default/files/styles/main_edito/public/2022-09/stromae_760x480_couv.jpg.webp?itok=rCmeHyda");
+  background-image: url("https://www.uber-arena.de/assets/img/Arcade-Fire-2022_001-22bbf9b72e.JPG");
   background-size: cover;
   background-position: center;
   min-height: 60vh;
@@ -399,16 +387,13 @@ section {
 }
 
 @keyframes glow {
-
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 10px #eb95ec,
-      0 0 20px rgba(235, 149, 236, 0.5);
+                0 0 20px rgba(235, 149, 236, 0.5);
   }
-
   50% {
     box-shadow: 0 0 25px #eb95ec,
-      0 0 50px rgba(235, 149, 236, 0.8);
+                0 0 50px rgba(235, 149, 236, 0.8);
   }
 }
 
@@ -473,19 +458,9 @@ section {
 }
 
 @keyframes shake {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(-5px) rotate(-2deg);
-  }
-
-  75% {
-    transform: translateX(5px) rotate(2deg);
-  }
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-5px) rotate(-2deg); }
+  75%      { transform: translateX(5px) rotate(2deg); }
 }
 
 
@@ -554,15 +529,8 @@ section {
   pointer-events: none;
 }
 
-.btn-hearts::before {
-  top: 50%;
-  left: 10%;
-}
-
-.btn-hearts::after {
-  top: 50%;
-  right: 10%;
-}
+.btn-hearts::before { top: 50%; left: 10%; }
+.btn-hearts::after  { top: 50%; right: 10%; }
 
 .btn-hearts:hover {
   transform: scale(1.05);
@@ -577,158 +545,52 @@ section {
 }
 
 @keyframes float-left {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(-30px, -40px);
-  }
+  0%   { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(-30px, -40px); }
 }
 
 @keyframes float-right {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate(30px, -40px);
-  }
+  0%   { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(30px, -40px); }
 }
 
 
 /* =========================================================
    COLOR UTILITY CLASSES
    ========================================================= */
-.pink {
-  color: #eb95ec;
-}
+.pink   { color: #eb95ec; }
+.green  { color: #8de38c; }
+.purple { color: #bc7afa; }
+.blue   { color: #6894ec; }
+.yellow { color: #ecd868; }
+.orange { color: #eca068; }
+.black  { color: #000; }
+.white  { color: #fff; }
 
-.green {
-  color: #8de38c;
-}
-
-.purple {
-  color: #bc7afa;
-}
-
-.blue {
-  color: #6894ec;
-}
-
-.yellow {
-  color: #ecd868;
-}
-
-.orange {
-  color: #eca068;
-}
-
-.black {
-  color: #000;
-}
-
-.white {
-  color: #fff;
-}
-
-.background-pink {
-  background-color: #eb95ec;
-}
-
-.background-green {
-  background-color: #8de38c;
-}
-
-.background-purple {
-  background-color: #bc7afa;
-}
-
-.background-blue {
-  background-color: #6894ec;
-}
-
-.background-yellow {
-  background-color: #ecd868;
-}
-
-.background-orange {
-  background-color: #eca068;
-}
-
-.background-black {
-  background-color: #000;
-}
-
-.background-white {
-  background-color: #fff;
-}
+.background-pink   { background-color: #eb95ec; }
+.background-green  { background-color: #8de38c; }
+.background-purple { background-color: #bc7afa; }
+.background-blue   { background-color: #6894ec; }
+.background-yellow { background-color: #ecd868; }
+.background-orange { background-color: #eca068; }
+.background-black  { background-color: #000; }
+.background-white  { background-color: #fff; }
 
 /* =========================================================
    SIZE UTILITY CLASSES
    ========================================================= */
-.very-big {
-  font-size: 48px;
-}
-
-.big {
-  font-size: 24px;
-}
-
-.small {
-  font-size: 12px;
-}
+.very-big { font-size: 48px; }
+.big      { font-size: 24px; }
+.small    { font-size: 12px; }
 
 /* =========================================================
    SPACING & ALIGNMENT UTILITIES
    ========================================================= */
-.padding-0 {
-  padding: 0;
-}
-
-.margin-0 {
-  margin: 0;
-}
-
-.margin-small {
-  margin: 8px;
-}
-
-.margin-medium {
-  margin: 24px;
-}
-
-.margin-large {
-  margin: 36px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: end;
-}
-
-.round {
-  border-radius: 150px;
-}
-
-.height-small {
-  min-height: 200px;
-}
-
-.height-big {
-  min-height: 400px;
-}
-
-/* add to container (parent box) */
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.padding-0   { padding: 0; }
+.margin-0    { margin: 0; }
+.margin-small    { margin: 8px; }
+.margin-medium    { margin: 24px; }
+.margin-large    { margin: 36px; }
+.text-center { text-align: center; }
+.text-right { text-align: end; }
+.round {border-radius: 150px;}
